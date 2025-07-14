@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+</head>
+<body>
+	<!-------Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
+Example 1:
+Input: nums = [1, 2, 3, 3]
+Output: true
+Example 2:
+Input: nums = [1, 2, 3, 4]
+Output: false -->
+	<script>
+		function containsDuplicate(nums){
+			let seen = new Set();
+
+			for(let number of nums){
+				if (seen.has(number)) {
+					return true;
+				}
+				seen.add(number);
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>
